@@ -1,7 +1,7 @@
 import { ApolloServer } from "@apollo/server";
-import { resolvers } from "./resolvers";
 import { startStandaloneServer } from "@apollo/server/standalone";
-import { typeDefs } from "./schema";
+import resolvers from "./resolvers/index";
+import typeDefs from "./schema/index";
 import datasources from "./datasources";
 import { IDataSourceContext } from "./common";
 

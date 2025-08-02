@@ -1,1 +1,3 @@
-export * from "./schema";
+import { typeDefs } from "./schema";
+
+export default typeDefs;

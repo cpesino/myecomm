@@ -1,1 +1,3 @@
-export * from "./resolvers";
+import { resolvers } from "./resolvers";
+
+export default resolvers;

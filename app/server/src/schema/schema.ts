@@ -1,4 +1,7 @@
-export const typeDefs = `
-    type Query {}
-    type Mutation {}
+const typeDefs = `
+    type Query{
+        users: Boolean
+    }
 `;
+
+export { typeDefs };
