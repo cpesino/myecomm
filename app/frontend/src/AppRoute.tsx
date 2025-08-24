@@ -1,19 +1,16 @@
 import React from "react";
-import {
-    BrowserRouterProps,
-    createBrowserRouter,
-    RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { PHome } from "./pages";
+import { AppRoutes } from "./common";
 
-export const router: BrowserRouterProps = createBrowserRouter([
-    {
-        path: "/",
-        element: <PHome />,
-        children: [],
-    },
+export const router = createBrowserRouter([
+  {
+    path: AppRoutes.HOME,
+    element: <PHome />,
+    children: [],
+  },
 ]);
 
 export const AppRoute: React.FC = () => {
-    return <RouterProvider router={router} />;
+  return <RouterProvider router={router} />;
 };

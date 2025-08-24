@@ -1,5 +1,9 @@
 /node_modules
 
+# Ignore all env files except local
+.env*
+!.env.local
+
 #server
 /app/server/node_modules
 /app/server/dist
