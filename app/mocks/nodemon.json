@@ -1,0 +1,6 @@
+{
+  "watch": ["index.js", "mappings", "__files"],
+  "ext": "json,js",
+  "ignore": ["node_modules"],
+  "exec": "node index.js"
+}

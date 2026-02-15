@@ -1,0 +1,16 @@
+{
+  "name": "mocks",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "kill-port $MOCKS_PORT && nodemon",
+    "stop": "docker compose down"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "kill-port": "^2.0.1"
+  }
+}
