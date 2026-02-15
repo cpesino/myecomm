@@ -1,18 +1,25 @@
 {
-    "name": "myecomm",
-    "version": "1.0.0",
-    "private": true,
-    "scripts": {
-        "start": "concurrently \"yarn workspace server start\" \"yarn workspace frontend start\"",
-        "dev": "npm run dev --workspace frontend && npm run dev --workspace server"
-    },
-    "workspaces": [
-        "app/*"
-    ],
-    "devDependencies": {
-        "concurrently": "^9.2.0"
-    },
-    "dependencies": {
-        "dotenv": "^17.2.1"
-    }
+  "name": "myecomm",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "app/*"
+  ],
+  "scripts": {
+    "dev:mocks": "yarn workspace mocks dev",
+    "dev:server": "yarn workspace server dev",
+    "dev:frontend": "yarn workspace frontend dev",
+    "dev": "dotenv -e .env.local -- concurrently \"yarn dev:mocks\" \"yarn dev:server\" \"yarn dev:frontend\"",
+    "start:all": "yarn dev"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.1"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0",
+    "dotenv-cli": "^11.0.0",
+    "kill-port": "^2.0.1",
+    "nodemon": "^3.0.2",
+    "wait-on": "^8.0.4"
+  }
 }
