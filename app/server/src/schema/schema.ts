@@ -9,6 +9,6 @@ const typeDefs = `
     type Query{
         users: [User]
     }
-`;
+`
 
-export { typeDefs };
+export { typeDefs }
