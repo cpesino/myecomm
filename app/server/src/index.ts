@@ -4,6 +4,9 @@ import resolvers from "./resolvers/index";
 import typeDefs from "./schema/index";
 import datasources from "./datasources";
 import { IDataSourceContext } from "./common";
+import 'dotenv/config';
+
+console.log(process.env.GRAPHQL_API_URL);
 
 const server = new ApolloServer<IDataSourceContext>({
     typeDefs,
